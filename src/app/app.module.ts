@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { AppService } from './app.service';
-
+import { APIService } from './api.service';
+import { Configuration } from './app.constants';
 import { AppComponent } from './app.component';
 
 
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule, HttpClientModule
   ],
-  providers: [AppService],
+  providers: [APIService, Configuration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

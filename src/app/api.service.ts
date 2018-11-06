@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Configuration } from './app.constants';
 
 const httpOptions = {
@@ -8,15 +7,15 @@ const httpOptions = {
 };
 
 @Injectable()
-export class AppService {
+export class APIService {
 
     private actionUrl: string;
 
-    constructor(private http: HttpClient, private configuration: Configuration) {
-      this.actionUrl = configuration.serverWithApiUrl + 'values/';
+    constructor(private httpClient: HttpClient, private configuration: Configuration) {
+      this.actionUrl = configuration.server;
     }
 
     getUsers() {
-        return this.http.get('/api/users');
+        return this.httpClient.get(this.actionUrl + '/api/users');
     }
 }
