@@ -2,9 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
-## Development server
+## Install Angular CLI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install -g @angular/cli
+```
 
 ## Code scaffolding
 
@@ -22,6 +24,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Deploy into Chrome browser
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions)
+2. Enable Developer mode by ticking the checkbox in the upper-right corner
+3. Click on the "Load unpacked extension..." button
+4. Select the `dist/` directory, containing your unpacked extension
+5. You can use the extension without restarting after each compilation
