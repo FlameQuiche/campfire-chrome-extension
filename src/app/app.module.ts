@@ -1,40 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }    from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule }     from './app-routing.module';
 
 import { Configuration } from './app.constants';
 
-import { AuthService } from './service/auth.service';
+import { AuthenticationService } from './service/authentication.service';
+import { UserService } from './service/user.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TokenInterceptor } from './interceptor/token.interceptor';
+import { ErrorInterceptor } from './interceptor/error.interceptor';
+import { JwtInterceptor } from "./interceptor/jwt.interceptor";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptor,
+      useClass: ErrorInterceptor,
       multi: true
     },
-    AuthService, Configuration],
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    },
+    AuthenticationService, UserService, Configuration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
