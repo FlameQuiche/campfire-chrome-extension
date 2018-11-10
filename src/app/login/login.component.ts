@@ -41,6 +41,6 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     this.authenticationService.login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)
-    .subscribe(res => this.router.navigate(['/login']));
+    .subscribe(res => this.router.navigate(['/home']));
   }
 }
