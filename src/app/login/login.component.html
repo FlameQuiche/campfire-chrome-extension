@@ -9,18 +9,18 @@
 <form [formGroup]="loginForm">
   <div class="container">
     <label for="username"><b>Login</b></label>
-    <input formControlName="username" type="text" placeholder="Enter your email" name="username" required>
+    <input formControlName="username" class="form-control" type="text" placeholder="Enter your email" name="username" required>
 
     <label for="password"><b>Password</b></label>
-    <input formControlName="password" type="password" placeholder="Enter your password" name="password" required>
+    <input formControlName="password" class="form-control" type="password" placeholder="Enter your password" name="password" required>
 
-    <button (click)="doLogin()">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember" /> Remember me
     </label>
   </div>
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
+    <button (click)="doLogin()" class="btn btn-primary">Login</button>
+    <button type="button" class="cancelbtn" class="btn btn-danger">Cancel</button>
     <span class="password">Forgot <a href="#">password?</a></span>
   </div>
 </form>
