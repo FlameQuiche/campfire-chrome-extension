@@ -9,6 +9,7 @@ import { Configuration } from './app.constants';
 
 import { AuthenticationService } from './service/authentication.service';
 import { UserService } from './service/user.service';
+import { BookmarkService } from './service/bookmark.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -45,7 +46,7 @@ import { JwtInterceptor } from "./interceptor/jwt.interceptor";
       useClass: JwtInterceptor,
       multi: true
     },
-    AuthenticationService, UserService, Configuration],
+    AuthenticationService, UserService, BookmarkService, Configuration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

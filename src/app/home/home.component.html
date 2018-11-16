@@ -8,4 +8,11 @@
 <span *ngIf="user">
   Bienvenue {{user.firstName}}
   <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
+
+  <h2>Vos marques page</h2>
+      <ul>
+     <li ng-repeat="bookmark in bookmarks">
+      {{bookmark.url}}
+     </li>
+    </ul>
 </span>
