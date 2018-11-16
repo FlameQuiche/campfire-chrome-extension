@@ -5,7 +5,7 @@
   </h1>
 </div>
 
-<span>
-  Bienvenue {{user}}
+<span *ngIf="user">
+  Bienvenue {{user.firstName}}
   <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
 </span>

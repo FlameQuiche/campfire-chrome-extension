@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light navbar-expand-md">
+  <a class="navbar-brand"></a>
+  <span class="navbar-brand">CampFire</span>
+  <ul *ngIf="isAuthenticated()" class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Catégorie
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" [routerLink]="['/home']">Accueil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Favoris</a>
+        <a class="dropdown-item" href="#">Humeur du jour</a>
+        <a class="dropdown-item" href="#">Boîte à idées</a>
+      </div>
+    </li>
+  </ul>
+</nav>
