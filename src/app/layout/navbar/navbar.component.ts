@@ -9,6 +9,7 @@ import { AuthenticationService } from '../../service/authentication.service';
 })
 export class NavbarComponent {
   title = 'CampFire';
+  isNavbarCollapsed=true;
 
   constructor(private authenticationService: AuthenticationService) {}
   

@@ -1,4 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Welcome
@@ -8,11 +7,4 @@
 <span *ngIf="user">
   Bienvenue {{user.firstName}}
   <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
-
-  <h2>Vos marques page</h2>
-      <ul>
-     <li ng-repeat="bookmark in bookmarks">
-      {{bookmark.url}}
-     </li>
-    </ul>
 </span>

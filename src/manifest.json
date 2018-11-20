@@ -9,11 +9,8 @@
     },
     "options_page": "index.html",
     "permissions": [
-        "*://*/*",
-        "script-src 'self' 'unsafe-eval'",
         "activeTab",
         "storage",
         "debugger"
-    ],
-    "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'"
+    ]
 }

@@ -14,7 +14,20 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-aot` or `-prod` flag for a production build.
+
+It is necessary to compile with the argument '-aot' to generate this extension, under penalty of having these errors:
+`Refused to connect to 'http(s)://*' because it violates the following Content Security Policy directive: "default-src 'self' 'unsafe-eval'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.`
+
+So, please use this command for each build :
+```
+ng build --aot
+```
+
+You do not need to add `-aot` when compiling with the `-prod` argument
+```
+ng build --prod
+```
 
 ## Running unit tests
 

@@ -1,21 +1,20 @@
-<nav class="navbar navbar-light bg-light navbar-expand-md">
-  <a class="navbar-brand"></a>
-  <span class="navbar-brand">CampFire</span>
-  <ul *ngIf="isAuthenticated()" class="nav navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Catégorie
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" [routerLink]="['/home']">Accueil</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Favoris</a>
-        <a class="dropdown-item" href="#">Humeur du jour</a>
-        <a class="dropdown-item" href="#">Boîte à idées</a>
-      </div>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>Catégories</a>
+        <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLink]="['/logout']">Se déconnecter</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Favoris</a>
+          <a class="dropdown-item" href="#">Humeur du jour</a>
+          <a class="dropdown-item" href="#">Boîte à idées</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
