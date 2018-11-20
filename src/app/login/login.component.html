@@ -1,19 +1,37 @@
-<h1>Veuillez vous identifier</h1>
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" class="form-signin">
+  <!--
+      you can substitue the span of reauth email for a input with the email and
+      include the remember me checkbox
+      -->
   <div class="container">
-    <label for="username"><b>Login</b></label>
-    <input formControlName="username" class="form-control" type="text" placeholder="Enter your email" name="username" required>
+    <div class="card card-container">
+      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+      <!--img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/-->
+      <img id="profile-img" class="profile-img-card" src="../../assets/dancing.gif"/>
+      <p id="profile-name" class="profile-name-card"></p>
 
-    <label for="password"><b>Password</b></label>
-    <input formControlName="password" class="form-control" type="password" placeholder="Enter your password" name="password" required>
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" /> Remember me
-    </label>
-  </div>
-  <div class="container" style="background-color:#f1f1f1">
-    <button (click)="doLogin()" class="btn btn-primary">Login</button>
-    <button type="button" class="cancelbtn" class="btn btn-danger">Cancel</button>
-    <span class="password">Forgot <a href="#">password?</a></span>
-  </div>
+      <!--label for="username"><b>Login</b></label-->
+      <input formControlName="username" class="form-control" type="text" placeholder="Username" name="username"
+             required autofocus>
+      <br>
+      <!--label for="password"><b>Password</b></label-->
+      <input formControlName="password" class="form-control" type="password" placeholder="Password" name="password"
+             required>
+
+      <label class="text-white">
+        <input type="checkbox" checked="checked" name="remember"/> Remember me
+      </label>
+
+
+      <button (click)="doLogin()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+      <!--button type="button" class="cancelbtn" class="btn btn-danger">Cancel</button-->
+      <a href="#" class="forgot-password">
+        Forgot the password?
+      </a>
+
+
+    </div><!-- /card-container -->
+  </div><!-- /container -->
 </form>
+
