@@ -12,5 +12,6 @@
         "activeTab",
         "storage",
         "debugger"
-    ]
+    ],
+    "content_security_policy": "style-src 'unsafe-inline'; script-src 'self' 'unsafe-eval'; object-src 'none'"
 }
