@@ -1,3 +1,8 @@
 a {
     cursor: pointer;
 }
+
+.navbar-title {
+  color:white;
+  font-weight: bold;
+}

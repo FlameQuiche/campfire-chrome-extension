@@ -12,22 +12,26 @@
 
 
       <!--label for="username"><b>Login</b></label-->
-      <input formControlName="username" class="form-control" type="text" placeholder="Username" name="username"
+      <input formControlName="username" class="form-control icon-username" type="text" placeholder="Nom de compte" name="username"
              required autofocus>
       <br>
+
       <!--label for="password"><b>Password</b></label-->
-      <input formControlName="password" class="form-control" type="password" placeholder="Password" name="password"
+      <input formControlName="password" class="form-control icon-connexionmotpasse" type="password"
+             placeholder="Mot de passe"
+             name="password"
              required>
 
       <label class="text-white">
-        <input type="checkbox" checked="checked" name="remember"/> Remember me
+        <input type="checkbox" checked="checked" name="remember"/> Se souvenir de moi
       </label>
 
 
-      <button (click)="doLogin()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+      <button (click)="doLogin()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Se connecter
+      </button>
       <!--button type="button" class="cancelbtn" class="btn btn-danger">Cancel</button-->
       <a href="#" class="forgot-password">
-        Forgot the password?
+        Mot de passe oublié ?
       </a>
 
 
