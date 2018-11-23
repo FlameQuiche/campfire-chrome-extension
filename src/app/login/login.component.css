@@ -129,3 +129,15 @@
 .forgot-password:focus{
   color: rgb(221, 67, 10);
 }
+
+.icon-username {
+  background: url('../../assets/icon-user.png') no-repeat scroll 0px 2px;
+  padding-left:32px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.icon-connexionmotpasse {
+  background: url('../../assets/icon-cadenas.png') no-repeat scroll 0px 2px;
+  padding-left:32px;
+  background-color: rgba(255,255,255,0.5);
+}

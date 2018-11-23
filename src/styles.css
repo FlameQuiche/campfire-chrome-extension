@@ -9,3 +9,8 @@ body {
 .btn-primary {
   background-color: red;
 }
+
+.navbar {
+  background: -moz-linear-gradient(top,  #7d7e7d 0%, #e95420 1%, #e95420 100%);
+  background: -webkit-linear-gradient(top,  #7d7e7d 0%, #e95420 1%, #e95420 100%);
+}
