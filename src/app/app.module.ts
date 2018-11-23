@@ -15,6 +15,7 @@ import { BookmarkService } from './service/bookmark.service';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { BookmarkComponent } from './bookmark/bookmark.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 
@@ -26,6 +27,7 @@ import { JwtInterceptor } from "./interceptor/jwt.interceptor";
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    BookmarkComponent,
     LoginComponent,
     LogoutComponent
   ],

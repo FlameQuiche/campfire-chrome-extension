@@ -3,14 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guard/auth.guard';
 
 import { HomeComponent }       from './home/home.component';
-import { LoginComponent }       from './login/login.component';
-import { LogoutComponent }       from './logout/logout.component';
+import { BookmarkComponent }   from './bookmark/bookmark.component';
+import { LoginComponent }      from './login/login.component';
+import { LogoutComponent }     from './logout/logout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard],
     children: [
-      { path: 'bookmark', component: HomeComponent }
+      { path: 'bookmark', component: BookmarkComponent }
     ]
   },
   { path: 'login', component: LoginComponent },
