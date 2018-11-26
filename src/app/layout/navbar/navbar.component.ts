@@ -15,6 +15,7 @@ export class NavbarComponent {
   constructor(private authenticationService: AuthenticationService,
               private route: ActivatedRoute,
               private router: Router) {}
+
   isAuthenticated() {
     return this.authenticationService.isAuthenticated();
   }
