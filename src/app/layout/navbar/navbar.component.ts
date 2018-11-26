@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AuthenticationService } from '../../service/authentication.service';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +10,11 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class NavbarComponent {
   title = 'CampFire';
-  isNavbarCollapsed=true;
+  isNavbarCollapsed = true;
 
   constructor(private authenticationService: AuthenticationService,
               private route: ActivatedRoute,
               private router: Router) {}
-  
   isAuthenticated() {
     return this.authenticationService.isAuthenticated();
   }

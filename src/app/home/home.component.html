@@ -8,10 +8,11 @@
   Bienvenue {{user.firstName}}
 
   <ul>
-    <li><a class="nav-link" href="/#/bookmark">Mes favoris</a></li>
+    <li><a class="nav-link" [routerLink]="['/home/bookmark']">Mes favoris</a></li>
     <!--li><a class="nav-link" [routerLink]="['/mood']">Mon humeur</a></li>
     <li><a class="nav-link" [routerLink]="['/idea']">Boite à idées</a></li-->
     <li></li>
     <li><a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a></li>
   </ul>
 </span>
+<router-outlet></router-outlet>

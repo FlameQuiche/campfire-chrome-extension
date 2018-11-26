@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-    
     // reset login status
     this.authenticationService.logout();
 
