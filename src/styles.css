@@ -1,6 +1,6 @@
 body {
   min-width:350px;
-  background-image: url('./assets/campfire.jpg');
+
   background-size: contain;
   -webkit-background-size: cover;
   background-repeat:no-repeat;

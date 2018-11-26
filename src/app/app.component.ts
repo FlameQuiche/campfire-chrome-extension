@@ -11,7 +11,6 @@ export class AppComponent {
   title = 'CampFire';
 
   constructor(private authenticationService: AuthenticationService) {}
-  
   isAuthenticated() {
     return this.authenticationService.isAuthenticated();
   }

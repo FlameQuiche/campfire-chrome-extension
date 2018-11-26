@@ -11,7 +11,7 @@
         <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
           <a class="dropdown-item" [routerLink]="['/logout']">Se déconnecter</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="goBookmark()">Favoris</a>
+          <a class="dropdown-item" [routerLink]="['/home/bookmark']">Favoris</a>
           <a class="dropdown-item" href="/#/mood">Humeur du jour</a>
           <a class="dropdown-item" href="/#/ideas">Boîte à idées</a>
         </div>
