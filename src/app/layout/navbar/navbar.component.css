@@ -25,8 +25,3 @@ a {
 .navbar-content li:hover {
     background-color: #f8f9fa;
 }
-
-.navbar-title {
-  color:white;
-  font-weight: bold;
-}

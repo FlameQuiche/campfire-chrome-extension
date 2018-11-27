@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-light">
   <img src="../../assets/logo.png" width="48" height="48"/>
   <a class="navbar-brand navbar-title" [routerLink]="['/home']">{{title}}</a>
   <button *ngIf="isAuthenticated()" class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-=======
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <img src="../../assets/logo.png" width="48" height="48"/>
-  <a class="navbar-brand navbar-title" [routerLink]="['/home']">{{title}}</a>
-  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
->>>>>>> nouvelle couche cosmetique
     <span class="navbar-toggler-icon"></span>
   </button>
   <div *ngIf="isAuthenticated()" [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
