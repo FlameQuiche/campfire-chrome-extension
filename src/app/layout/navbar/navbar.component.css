@@ -22,6 +22,25 @@ a {
 }
 
 .navbar-title {
-  color:white;
+  color: white;
   font-weight: bold;
+}
+
+.navbar {
+    background-color: #DFE0DF;
+}
+
+.navbar-content {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: .25rem;
+    margin: 10px 0;
+}
+
+.navbar-content li {
+    padding: 0 12px;
+}
+
+.navbar-content li:hover {
+    background-color: #f8f9fa;
 }
