@@ -1,0 +1,20 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.active-amber input[type=text]:focus:not([readonly]) {
+    border: 1px solid #17a2b8;
+    box-shadow: 0 0 0 1px #17a2b8;
+}
+
+#tag {
+    display: inline;
+}
+.card-header {
+    background-color: #DFE0DF;
+}
+.card:hover {
+    border: 1px solid #17a2b8;
+    box-shadow: 0 0 0 1px #17a2b8;
+}

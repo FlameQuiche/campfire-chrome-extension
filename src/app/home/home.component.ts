@@ -19,16 +19,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
-    this.getBookmarks();
   }
 
   getUser(): void {
     this.userService.getUser()
     .subscribe(user => this.user = user);
-  }
-
-  getBookmarks(): void {
-    this.bookmarkService.getBookmarks()
-      .subscribe(bookmarks => this.bookmarks = bookmarks);
   }
 }

@@ -1,20 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!--<a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>-->
   <a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
-  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <button *ngIf="isAuthenticated()" class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>Catégories</a>
-        <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-          <a class="dropdown-item" [routerLink]="['/logout']">Se déconnecter</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Favoris</a>
-          <a class="dropdown-item" href="#">Humeur du jour</a>
-          <a class="dropdown-item" href="#">Boîte à idées</a>
-        </div>
-      </li>
+  <div *ngIf="isAuthenticated()" [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+    <ul class="navbar-nav mr-auto navbar-content">  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/category/bookmarks']">Favoris</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Humeur du jour</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boîte à idées</a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/logout']">Se déconnecter</a>
+        </li>
     </ul>
   </div>
 </nav>
