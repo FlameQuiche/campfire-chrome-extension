@@ -13,8 +13,6 @@ export class BookmarkService {
     constructor(private http: HttpClient, private configuration: Configuration) {}
 
     getBookmarks(query: string): Observable<Bookmark[]> {
-        return this.http.get<Bookmark[]>(this.configuration.serverWithApiUrl + (query ? '/bookmarks?query=' + query : '/bookmarks')).pipe(
-            tap(_ => console.log(`found heroes matching "${query}"`))
-          );
+        return this.http.get<Bookmark[]>(this.configuration.serverWithApiUrl + (query ? '/bookmarks?query=' + query : '/bookmarks'));
     }
 }
