@@ -1,0 +1,26 @@
+<div style="text-align:center">
+  <h1>Favoris</h1>
+</div>
+
+<div id="tags" class="mx-2 mb-2">
+  <div *ngFor="let tag of tags" id="tag" class="mr-1">
+    <span class="badge badge-secondary">{{tag.name}} : {{tag.count}}</span>
+  </div>
+</div>
+
+<div class="active-amber mx-2 py-3">
+  <input #searchBox class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search" (keyup)="search(searchBox.value)">
+</div>
+
+<div *ngIf="bookmarks" id="bookmarks" class="mt-2">
+  <div *ngFor="let bookmark of bookmarks | async" class="card m-2">
+    <a target="_blank" href="{{bookmark.url}}">
+        <div class="card-header px-2 py-0">{{bookmark.name}}</div>
+        <div class="card-body px-3 py-1">
+          <div *ngFor="let tag of bookmark.tags" class="d-inline">
+            <span class="badge badge-pill badge-info mr-1">{{tag}}</span>
+          </div>
+      </div>
+    </a>
+  </div>
+</div>
