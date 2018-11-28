@@ -1,14 +1,14 @@
 body {
   min-width:350px;
-  background-image: url('./assets/campfire.jpg');
+
   background-size: contain;
   -webkit-background-size: cover;
   background-repeat:no-repeat;
 }
 
 .navbar {
-  background: -moz-linear-gradient(top,  #7d7e7d 0%, #dd810d 1%, #fff8f7 100%);
-  background: -webkit-linear-gradient(top,  #7d7e7d 0%, #dd8105 1%, #fcfffd 100%);
+  background: -moz-linear-gradient(top,  #7d7e7d 0%, #e95420 1%, #e95420 100%);
+  background: -webkit-linear-gradient(top,  #7d7e7d 0%, #e95420 1%, #e95420 100%);
 }
 /*
 .navbar ul {
