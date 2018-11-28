@@ -1,14 +1,3 @@
-/*
- * Specific styles of signin component
- */
-/*
- * General styles
- */
-
-::ng-deep body{
-background-image: url('../../assets/campfire.jpg');
-}
-
 .card-container.card {
   max-width: 350px;
   padding: 40px 40px;
